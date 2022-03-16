@@ -60,6 +60,10 @@ namespace API2
                     ClockSkew = TimeSpan.Zero
                 };
             });
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
 
         }
 
@@ -76,7 +80,7 @@ namespace API2
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-           
+            app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {

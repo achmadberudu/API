@@ -15,7 +15,7 @@ namespace API2.Controllers
 {
     [Route("api2/[controller]")]
     [ApiController]
-    public class EmployeesController : BaseController <Employee, EmployeeRepository, string>
+    public class EmployeesController : BaseController<Employee, EmployeeRepository, string>
     {
         private readonly EmployeeRepository employeeRepository;
         public IConfiguration _configuration;
@@ -31,11 +31,16 @@ namespace API2.Controllers
             var result = employeeRepository.MasterEmployee();
             return Ok(result);
         }
-        [Authorize (Roles ="Manager")]
+        [Authorize(Roles = "Manager")]
         [HttpGet("TestJWT")]
         public ActionResult TestJWT()
         {
             return Ok("Test JWT Berhasil");
+        }
+        [HttpGet("TestCors")]
+        public ActionResult TestCors()
+        {
+            return Ok("Test CORS Berhasil");
         }
     }
 }
