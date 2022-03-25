@@ -40,7 +40,8 @@ namespace API2.Controllers
         [HttpGet("TestCors")]
         public ActionResult TestCors()
         {
-            return Ok("Test CORS Berhasil");
+            var result = employeeRepository.Get();
+            return Ok(result);
         }
     }
 }

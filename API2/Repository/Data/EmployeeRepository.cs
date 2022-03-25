@@ -31,7 +31,7 @@ namespace API2.Repository.Data
                             Phone = d.eaped.eap.ea.e.Phone,
                             Gender = d.eaped.eap.ea.e.Gender.ToString(),                           
                             Email = d.eaped.eap.ea.e.Email,
-                            BirthDate = d.eaped.eap.ea.e.BirtDate,
+                            BirthDate = d.eaped.eap.ea.e.BirtDate.ToString("dd-MM-yyyy"),
                             Salary = d.eaped.eap.ea.e.Salary,
                             Education_Id = d.eaped.eap.p.Education_id,
                             GPA = d.eaped.ed.GPA,

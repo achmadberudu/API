@@ -69,8 +69,8 @@ C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\BouncyCastle.Cr
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\BCrypt.Net-Core.dll
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
-C:\Users\brodo.id\source\repos\API2\API2\obj\Debug\netcoreapp3.1\API2.csproj.AssemblyReference.cache
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\brodo.id\source\repos\API2\API2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\brodo.id\source\repos\API2\API2\obj\Debug\netcoreapp3.1\API2.csproj.AssemblyReference.cache

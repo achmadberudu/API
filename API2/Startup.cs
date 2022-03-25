@@ -39,8 +39,9 @@ namespace API2
             services.AddScoped<RoleRepository>();
             services.AddScoped<AccountRoleRepository>();
             services.AddDbContext<MyContext>(options =>
-            options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("API2")));
-            services.AddControllersWithViews().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+           // options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("API2")));
+            options.UseSqlServer(Configuration.GetConnectionString("API2")));
+           // services.AddControllersWithViews().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddAuthentication(auth =>
             {
                 auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -80,13 +81,19 @@ namespace API2
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseCors(x => x
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .SetIsOriginAllowed(origin => true)
+               .AllowCredentials());
             app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            
+           
+
         }
     }
 }
